@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="LED_Controller.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LED_Controller"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Name="HomeScreen" Margin="50,0,0,0">
+                <TextBlock Text="Preview: "  FontSize="40" Margin="25,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                <Canvas Height="125" Width="125" Margin="25,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="colorIndicatorPreview" Background= "White"/>
+                <TextBlock Text="Current: "  FontSize="40" Margin="200,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                <Canvas Height="125" Width="125" Margin="200,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="colorIndicatorAppliedHome" Background= "White"/>
+                <Button Content="&#xE8FB;" FontFamily="Segoe MDL2 Assets" Name="ApplyButton" HorizontalAlignment="Left" Margin="50,600,0,0" Width="100" Height="50" VerticalAlignment="Top" Click="ApplyButton_Click"/>
+                <Button Content="&#xE711;" FontFamily="Segoe MDL2 Assets" Name="CancelButton" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,600,0,0" Width="100" Height="50" Click="CancelButton_Click"/>
+                <Slider Maximum="255" Minimum="0" Width="200" Height="50" Margin="125,300,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="redSlider" Value="255" ValueChanged="RedSlider_ValueChanged"/>
+                <Slider Maximum="255" Minimum="0" Width="200" Height="50" Margin="125,400,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="greenSlider" Value="255" ValueChanged="GreenSlider_ValueChanged"/>
+                <Slider Maximum="255" Minimum="0" Width="200" Height="50" Margin="125,500,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="blueSlider" Value="255" ValueChanged="BlueSlider_ValueChanged"/>
+                <TextBlock Name="redTextIndicator" Text="Red"  FontSize="20" Margin="15,300,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Name="greenTextIndicator" Text="Green" FontSize="20" Margin="15,400,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Name="blueTextIndicator" Text="Blue" FontSize="20" Margin="15,500,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Name="redTextValue" Text="{Binding ElementName=redSlider, Path=Value}"  FontSize="20" Margin="80,300,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Name="greenTextValue" Text="{Binding ElementName=greenSlider, Path=Value}" FontSize="20" Margin="80,400,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Name="blueTextValue" Text="{Binding ElementName=blueSlider, Path=Value}" FontSize="20" Margin="80,500,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            </Grid>   
+</Page>

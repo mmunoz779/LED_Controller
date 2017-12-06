@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="LED_Controller.PresetPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LED_Controller"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid>
+        <TextBlock Margin="25,25,0,0" Text="Presets: " FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Name="PresetOne" Content="Preset 1" Width="75" Height="50" Margin="25,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PresetOne_Click"/>
+        <Button Name="SavePresetOne" Content="&#xE74E;" FontFamily="Segoe MDL2 Assets" Margin="170,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Click="SavePresetOne_Click"/>
+        <TextBlock Text="Current: "  FontSize="25" Margin="235,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <Canvas Height="50" Width="50" Margin="110,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="PresetOneColorPreview" Background="White"/>
+        <Canvas Height="50" Width="50" Margin="250,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="colorIndicatorAppliedPreset" Background= "White"/>
+        <Button Name="PresetTwo" Content="Preset 2" Width="75" Height="50" Margin="25,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="PresetTwo_Click"/>
+        <Button Name="SavePresetTwo" Content="&#xE74E;" FontFamily="Segoe MDL2 Assets" Margin="170,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="50" Click="SavePresetTwo_Click"/>
+        <Canvas Height="50" Width="50" Margin="110,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="PresetTwoColorPreview" Background="Black"/>
+    </Grid>
+</Page>
